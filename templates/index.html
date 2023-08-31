@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP - Sentiment Analysis using BERT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./static/mywebscript.js"></script>
+    <style>
+        body {
+            background-color: #E9F1FA; /* Light blue */
+            font-family: Arial, sans-serif;
+            color: #00ABE4; /* Bright blue */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .card {
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #FFFFFF; /* White */
+            padding: 20px; /* Added padding */
+        }
+
+        .center-heading {
+            text-align: center;
+            margin-top: 30px; /* Increased margin */
+        }
+
+        .form-label {
+            font-weight: bold;
+            font-size: 18px; /* Adjusted font size */
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+            background-color: #E9F1FA; /* Light blue */
+            color: #00ABE4; /* Bright blue */
+        }
+
+        .btn-secondary {
+            background-color: #00ABE4; /* Bright blue */
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: #0077B6; /* Regal blue */
+        }
+
+        #system_response {
+            background-color: #E9F1FA; /* Light blue */
+            padding: 20px;
+            border: 1px solid #00ABE4; /* Bright blue */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e416f; /* Dark blue */
+            margin-bottom: 20px; /* Added margin */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <h1 class="center-heading custom-title">NLP - Sentiment Analysis using BERT</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <h2 class="mb-3">
+                            <label class="form-label">Please enter the text to be analyzed</label>
+                            <input type="textarea" class="form-control" id="textToAnalyze">
+                        </h2>
+                        <div class="text-center">
+                            <button onclick="RunSentimentAnalysis()" class="btn btn-secondary">Run Sentiment Analysis</button>
+                        </div>
+                        <div class="mt-4">
+                            <h2 class="mb-3">
+                                <label class="form-label">Result of Sentiment Analysis</label>
+                            </h2>
+                            <div id="system_response"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
